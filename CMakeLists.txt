@@ -104,7 +104,7 @@ include(cmake/PackageProject.cmake)
 # we know we want to ship
 dh_cpplox_package_project(
   TARGETS
-  intro
+  cpplox
   dh_cpplox_options
   dh_cpplox_warnings
   # FIXME: this does not work! CK

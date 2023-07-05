@@ -12,28 +12,12 @@ function(dh_cpplox_setup_dependencies)
     cpmaddpackage("gh:fmtlib/fmt#9.1.0")
   endif()
 
-  if(NOT TARGET spdlog::spdlog)
-    cpmaddpackage(
-      NAME
-      spdlog
-      VERSION
-      1.11.0
-      GITHUB_REPOSITORY
-      "gabime/spdlog"
-      OPTIONS
-      "SPDLOG_FMT_EXTERNAL ON")
+  if(NOT TARGET Microsoft.GSL::GSL)
+    cpmaddpackage("gh:microsoft/GSL#v4.0.0")
   endif()
 
   if(NOT TARGET Catch2::Catch2WithMain)
     cpmaddpackage("gh:catchorg/Catch2@3.3.2")
-  endif()
-
-  if(NOT TARGET CLI11::CLI11)
-    cpmaddpackage("gh:CLIUtils/CLI11@2.3.2")
-  endif()
-
-  if(NOT TARGET ftxui::screen)
-    cpmaddpackage("gh:ArthurSonzogni/FTXUI#e23dbc7473654024852ede60e2121276c5aab660")
   endif()
 
   if(NOT TARGET tools::tools)
